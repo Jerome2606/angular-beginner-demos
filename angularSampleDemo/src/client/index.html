@@ -1,0 +1,15 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <style type="text/css" src="content/styles.css"></style>
+    </head>
+    <body ng-app="myFirstApp" ng-controller="HelloWorldController as vm" style="display:none">
+         <h1 >Hello {{vm.name | uppercase}}</h1>
+         
+         <input type="text" ng-model="vm.name">
+         
+         <script src="../../node_modules/angular/angular.min.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/controller/HelloWorld.js"></script>
+    </body>
+</html>

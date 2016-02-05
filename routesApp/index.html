@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>My Routing application</title>
+    <base href="/">
+    
+    
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet"></link>
+    <!-- bower:css -->
+    
+    <!-- endbower -->
+</head>
+<body>
+    <div ng-include="'app/layout/navbar.html'"></div>
+    
+    <div data-ui-view=""></div>
+    
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+    <script src="app/app.module.js"></script>
+    
+    <script src="app/core/core.module.js"></script>
+    <script src="app/blocks/router/router.module.js"></script>
+    <script src="app/blocks/router/router.config.js"></script>
+    
+    <script src="app/layout/layout.module.js"></script>
+    <script src="app/layout/navbar.controller.js"></script>
+    
+    <script src="app/home/home.module.js"></script>
+    <script src="app/home/home.controller.js"></script>
+    <script src="app/home/about.controller.js"></script>
+</body>
+</html>

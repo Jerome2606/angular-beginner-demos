@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>My first controller</title>
+</head>
+
+<body>
+    <div class="container" data-ng-app="app" data-ng-controller="Controller as vm">
+        <div class="row">
+        Name:
+        <input type="text" data-ng-model="vm.name" />
+        </div>
+        <div class="row">
+            <ul>
+                <li data-ng-repeat="entry in vm.entries | filter: vm.name | orderBy: 'name'">{{entry.name}} - {{entry.price | currency}}</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="node_modules/angular/angular.min.js" ></script>
+    
+    <script src="app/app.js" ></script>
+    
+    <script src="app/controller/Controller.js" ></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<div class="container" data-ng-controller="CreatePeopleController as vm">
+    <div class="row">
+        <div data-ng-show="vm.showValidationError" class="alert alert-danger" role="alert">Errors in form !</div>
+    </div>
+    <div class="row">
+        <form name="createForm">
+            <div class="form-group" data-ng-class="(createForm.name.$dirty || vm.showValidationError) && createForm.name.$invalid ? 'has-error' : ''">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">@</span>
+                    <input name="name" type="text" class="form-control" required data-ng-model="vm.people.name" placeholder="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="alert alert-danger" data-ng-messages="createForm.name.$error" data-ng-if="createForm.name.$dirty || vm.showValidationError">
+                    <div data-ng-message="required">This field is required</div>
+                </div>
+            </div>
+            <div class="form-group" data-ng-class="(createForm.rate.$dirty || vm.showValidationError) && createForm.rate.$invalid ? 'has-error' : ''">
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input name="rate" type="text" class="form-control" required data-ng-model="vm.people.rate" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-addon">.00</span>
+                </div>
+                <div class="alert alert-danger" data-ng-messages="createForm.rate.$error" data-ng-if="createForm.rate.$dirty || vm.showValidationError">
+                    <div data-ng-message="required">This field is required</div>
+                </div>
+            </div>
+            <button data-ng-click="vm.submitNewPeople()" type="button" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create
+            </button>
+        </form>
+    </div>
+</div>

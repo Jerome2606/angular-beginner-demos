@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My first filter</title>
+</head>
+<body>
+    <div class="container" data-ng-app="" data-ng-init="entries=[{name : 'Alan'},{name : 'Josh'},{name : 'Daniela'}]">
+        <div class="row">
+        Name:
+        <input type="text" data-ng-model="searchByName" />
+        </div>
+        <div class="row">
+            <ul>
+                <li data-ng-repeat="entry in entries | filter: searchByName | orderBy: 'name'">{{entry.name}}</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="node_modules/angular/angular.min.js" ></script>
+</body>
+</html>

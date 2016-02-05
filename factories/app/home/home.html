@@ -1,0 +1,8 @@
+<div class="container" data-ng-controller="HomeController as vm">
+    <div class="row">
+        <h1>Hello from home</h1>
+        <ul>
+            <li data-ng-repeat="people in vm.peoples">{{people.name}} - {{people.rate | currency}}</li>
+        </ul>
+    </div>
+</div>

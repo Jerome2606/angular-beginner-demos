@@ -1,0 +1,22 @@
+<div class="container" data-ng-controller="HomeController as vm">
+    <div class="row">
+        <h1>Hello from home</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="people in vm.peoples">
+                    <td>{{people.name}}</td>
+                    <td>{{people.rate | currency}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-default btn-lg" ui-sref="newPeople">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create new
+        </button>
+    </div>
+</div>
